@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multimediedesigner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Christoffer Abildskow Thomsen">
+    <meta name="description" content="Christoffer Abildskov Thomsen - Frontend Developer">
+    <link rel="stylesheet" href="https://use.typekit.net/wcb3oqk.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/faviconlogo2.png" sizes="32x32">
+</head>
+<body>
+    <header>
+
+        <!-- logo -->
+        <a href="index.html">
+        <img src="images/logo2.png" alt="christoffer abildskov" id="logo">
+    </a>
+        <!-- logo -->
+
+        <!-- Her begynder vores indhold i burgerbaren-->
+        <nav role="navigation">
+            <div id="menuToggle">
+                
+                <input type="checkbox"/>
+
+                <span id="spanone"></span>
+                <span id="spantwo"></span>
+                <span id="spanthree"></span>
+                
+                <ul id="burgermenu">
+                    <li class="burgerlist stroke"><a href="index.html">Work</a></li>
+                    <li class="burgerlist stroke"><a href="about.html">About</a></li>
+                    <li class="burgerlist stroke"><a href="contact.html">Contact</a></li>
+                    
+                       <li>
+                           <div id="flexicon">
+                               <a href="#" target="_blank"><img src="images/linkedin.png" alt="linkedin" class="some"></a>
+                               <a href="mailto: boffer97@live.dk" target="_blank"><img src="images/mailicon.png" alt="mail" class="some" id="mail"></a>
+                           </div>
+                       </li>
+                    
+                    
+                </ul>
+                <!-- Her slutter vores indhold i burgerbaren-->
+                <!-- Her starter pc navbar-->
+                <ul id="flex1">
+                    <li class="stroke"><a href="#" id="a1">Work</a></li>
+                    <li class="stroke"><a href="#" id="a2">About</a></li>
+                    <li class="stroke"><a href="#" id="a3">Contact</a></li>
+                </ul>
+                <!-- Her slutter pc navbar-->
+
+            </div>
+
+        </nav>
+    </header>
+    <!--Her slutter vores header og navigationsbar-->
+    
+<!-- Typewriter-->
+<div id="loading" style="display:none">
+
+<div class="container">
+    <p>i am<span class="typed-text"></span><span class="cursor typing"> &nbsp</span></p>
+</div>
+<img src="images/skip.png" alt="skip button" id="skip">
+</div>
+<!-- typewriter slutter-->
+<main>
+<!-- forside section 1-->
+<section id="section1">
+<img src="images/IMG_2576.png" alt="Christoffer Abildskov Thomsen" id="forsideChris">
+<div class="fancy">
+<h2 class="bx--heading--1" id="overskriftInfo">Christoffer Abildskov</h2>
+<h4>Multimediedesigner</h4>
+</div>
+</section>
+
+
+<section id="section2">
+
+<h1>Latest Work</h1>
+
+<ul>
+    <a href="#glr"><li class="workfilter">GLR</li></a>
+   <a href="#panorama"><li class="workfilter">Panorama Festival</li></a>
+   <a href="#istanbul"><li class="workfilter">Istanbul Bageri</li></a>
+   <a><li class="workfilter">First Semester</li></a>
+</ul>
+
+<a href=""><img src="images/glr2-kopi.png" alt="Golden Lady Records" id="startprojectimg" id="glr"></a>
+<h2 class="h2work">Golden Lady Records</h2>
+<p>... are an Aarhus based record company. Our job was to deliver them a webapplication, to secure their web presence, through the use of all the different frontend languages, including the use of Google Firebase and Cloud Firestore. <br/> We made sure that the webapp was responsive to secure users from all the different platforms. </p>
+<h3 class="h3work">Build with:</h3>
+<p>HTML5, CSS3, Vanillia JavaScript, Firebase & Cloud Firestore</p>
+
+<!-- Divider -->
+<div class="dividerDiv">
+     <span class="divider"></span> 
+</div>
+<!-- Divider ends -->
+
+<a href=""><img src="images/panorama-light-art-kopi.png" alt="Panorama Festival" id="panorama" class="workprojectsimg"></a>
+<h2 class="h2work">Panorama Festival</h2>
+<p>This project symbolizes the web presence from a festival in Copenhagen. It is a techno festival happening simultaneously, as the CPH Lights Festival.<br/> Based on our research and stakeholder interviews, we came to an agreement on how the website should be presented in terms of colors, content placement, navigation, and much more. </p>
+<h3 class="h3work">Build with:</h3>
+<p>HTML5, CSS3, Vanillia JavaScript and API's (JSON)</p>
+
+<!-- Divider -->
+<div class="dividerDiv">
+    <span class="divider"></span> 
+</div>
+<!-- Divider ends -->
+
+<a href=""><img src="images/istanbulbageri.png" alt="Istanbul Bageri" id="istanbul" class="workprojectsimg"></a>
+<h2 class="h2work">Istanbul Bageri</h2>
+<p>Through the use of a good storytelling, we developed a web documentary of Istanbul Bageri, located in Bazar Vest, Brabrand. This case really grasps the whole idea of a user experience. The job was to really tell the story of the bakery.</p>
+<h3 class="h3work">Build with:</h3>
+<p>HTML5, CSS3, Vanillia JavaScript and API's</p>
+
+</section>
+<!-- To the top button -->
+<img src="images/top.png" alt="To the top" id="myBtn" class="shake-vertical" onclick="topFunction()">
+
+<!-- forside section slutter-->
+    </main>
+    <footer>
+        <p>© CHRISTOFFER ABILDSKOV</p>
+    </footer>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

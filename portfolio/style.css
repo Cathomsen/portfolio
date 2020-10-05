@@ -1,0 +1,689 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+}
+
+h1,
+.bx--heading--1
+{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #272b2f;
+    letter-spacing: 2px;
+
+}
+
+h2 {
+    font-weight: 500;
+    font-style: normal;
+    color: #272b2f;
+    letter-spacing: 2px;
+    
+
+}
+
+h3 {
+  color: #272b2f;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding-bottom: 5px;
+}
+
+h4 {
+  color: #272b2f;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #7a7a7a;
+    letter-spacing: 0.05rem;
+    padding-bottom: 25px;
+}
+
+footer {
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+footer p {
+  font-size: 12px;
+  letter-spacing: 0.2rem;
+  padding-bottom: 5px;
+}
+
+/* Onboarding screen start*/
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: white;
+}
+
+/*
+#skip {
+  position: absolute;
+  z-index: 10000;
+  top: 80%;
+  left: 70%;
+}
+*/
+
+.container p {
+    font-size: 3rem;
+    text-align: center;
+    overflow: hidden;
+    padding: 0.5rem;
+}
+
+.typed-text {
+    font-weight: normal;
+    color: black;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: black;
+    margin-left: 0.1rem;
+    animation: blink 1s infinite;
+}
+
+.cursor typing {
+    animation: none;
+}
+
+@keyframes blink {
+    0% {background-color: black; }
+    49% {background-color: black; }
+    50% {background-color: transparent; }
+    99% {background-color: transparent; }
+    100% {background-color: black; }
+}
+/* Onboarding screen ends*/
+/* logo starts */
+#logo {
+    margin-left: 8%;
+    top: 1.5%;
+    position: fixed;
+    z-index: 4;
+    width: 10%;
+    
+}
+/* logo ends */
+#flex1 {
+    display: none;
+    flex-direction: row;
+    top: 5px;
+    right: 5px;
+}
+
+.current {
+    color: black; 
+    font-weight: 700;
+  }
+
+  .some {
+      width: 50%;
+  }
+nav {
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+    height: 10vh;
+    z-index: 3;
+}
+
+
+  #flexicon {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+
+}
+
+#mail {
+    margin-left: -25%;
+}
+/* burgerbar design*/
+a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+
+  
+  background: gray;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#spanone {
+    width: 33px;
+}
+
+#spantwo {
+    width: 23px;
+    margin-left: 10px;
+}
+
+#spanthree {
+    width: 33px;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ #spanone
+{
+  opacity: 1;
+  transform: rotate(34deg) translate(-2px, -1px);
+  background: #232323;
+  z-index: 99;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ #spantwo
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+  background: #232323;
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ #spanthree
+{
+  opacity: 1;
+  transform: rotate(-34deg) translate(0, -3px);
+  background: #232323;
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#burgermenu
+{
+  position: absolute;
+  width: 125vw;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+  height: 120vh;
+  
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#burgermenu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+
+/* to the top btn */
+#myBtn {
+    display: none;
+    width: 20%;
+    position: fixed;
+  bottom: -10px;
+  right: -25px;
+  
+}
+/* to the top btn ends */
+
+
+/* burgerbar design ends */
+
+/* section 1 forside */
+#section1 {
+  height: 40vh;
+    background-color: #e8eaec;
+    background-image: linear-gradient(175deg, rgba(0,0,0,0) 95%, #ffffff 95%),
+    linear-gradient( 85deg, rgba(0,0,0,0) 95%, #ffffff 95%),
+    linear-gradient(175deg, rgba(0,0,0,0) 90%, #c0c0c0 90%),
+    linear-gradient( 85deg, rgba(0,0,0,0) 92%, #c0c0c0 92%),
+    linear-gradient(175deg, rgba(0,0,0,0) 85%, #a9a9a9 85%),
+    linear-gradient( 85deg, rgba(0,0,0,0) 89%, #a9a9a9 89%),
+    linear-gradient(175deg, rgba(0,0,0,0) 80%, #808080 80%),
+    linear-gradient( 85deg, rgba(0,0,0,0) 86%, #808080 86%),
+    linear-gradient(175deg, rgba(0,0,0,0) 75%, #696969 75%),
+    linear-gradient( 85deg, rgba(0,0,0,0) 83%, #696969 83%),
+    linear-gradient(175deg, rgba(0,0,0,0) 70%, #000000 70%),
+    linear-gradient( 85deg, rgba(0,0,0,0) 80%, #000000 80%);
+}
+
+#forsideChris {
+  width: 65%;
+  margin: 6% 0 0 -10%;
+  opacity: 99%;
+  position: relative;
+  z-index: 2;
+}
+
+#infoBoksChris {
+  text-align: center;
+  border-bottom: 110px solid #555;
+  border-left: 25px solid transparent;
+  width: 175px;
+  height: 90px;
+  position: absolute;
+  top: 20%;
+  right: 6%;
+
+}
+.fancy {
+  position: absolute;
+  background-color: #FFFFFF;
+  padding: 2rem;
+  text-align: center;
+  max-width: 200px;
+  right: 6%;
+  top: 19%;
+  border-radius: 45% 0 0 0;
+}
+
+.fancy::before {
+  content: "";
+
+  position : absolute;
+  z-index  : -1;
+  bottom   : 15px;
+  right    : 5px;
+  width    : 50%;
+  top      : 80%;
+  max-width: 200px;
+
+  box-shadow: 0px 15px 12px black;
+  transform: rotate(4deg);
+}
+
+
+
+
+#overskriftInfo {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+/* section 1 forside slutter*/
+/* section 2 - work*/
+#section2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+.workfilter {
+    display: inline-block;
+    list-style: none;
+    padding: 0 10px 0 0;
+    color: gray;
+    font-size: 18px;
+    
+   }
+
+   #startprojectimg {
+       padding-top: 20px;
+   }
+
+
+   .h2work {
+       padding-top: 15px;
+       padding-bottom: 5px;
+   }
+
+
+.dividerDiv {
+  padding: 5% 0 20% 0;
+}
+
+.divider {
+  border-top-style: solid;
+    border-top-width: 1px;
+    width: 14%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 43%;
+    border-top-color: #7a7a7a;
+}
+/*section 2 -work slutter, og forside slutter */
+/* About page starter */
+#aboutSection1 {
+  height: 40vh;
+    background-color: #e8eaec;
+    background-image: linear-gradient(175deg, rgba(0,0,0,0) 95%, #ffffff 95%),
+                    linear-gradient( 85deg, rgba(0,0,0,0) 95%, #ffffff 95%),
+                    linear-gradient(175deg, rgba(0,0,0,0) 90%, #c0c0c0 90%),
+                    linear-gradient( 85deg, rgba(0,0,0,0) 92%, #c0c0c0 92%),
+                    linear-gradient(175deg, rgba(0,0,0,0) 85%, #a9a9a9 85%),
+                    linear-gradient( 85deg, rgba(0,0,0,0) 89%, #a9a9a9 89%),
+                    linear-gradient(175deg, rgba(0,0,0,0) 80%, #808080 80%),
+                    linear-gradient( 85deg, rgba(0,0,0,0) 86%, #808080 86%),
+                    linear-gradient(175deg, rgba(0,0,0,0) 75%, #696969 75%),
+                    linear-gradient( 85deg, rgba(0,0,0,0) 83%, #696969 83%),
+                    linear-gradient(175deg, rgba(0,0,0,0) 70%, #000000 70%),
+                    linear-gradient( 85deg, rgba(0,0,0,0) 80%, #000000 80%);
+                  }
+.aboutFancy {
+  position: absolute;
+  background-color: #FFFFFF;
+  padding: 2rem;
+  text-align: center;
+  max-width: 300px;
+  right: 6%;
+  top: 15%;
+  
+}
+
+.aboutFancy::before {
+  content: "";
+
+  position : absolute;
+ 
+  bottom   : 15px;
+  right    : -6px;
+  width    : 50%;
+  top      : 80%;
+  max-width: 300px;
+z-index: -1;
+  box-shadow: 0px 20px 12px black;
+  transform: rotate(3deg);
+}
+
+#aboutSection2 {
+  padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+h3.aboutMe {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#skills {
+  text-align: center;
+}
+/* About page slutter */
+/* Contact page starter */
+#contactSection1 {
+  height: 40vh;
+    background-color: #e8eaec;
+    background-image: linear-gradient(-175deg, rgba(0,0,0,0) 95%, #ffffff 95%),
+                    linear-gradient( -85deg, rgba(0,0,0,0) 95%, #ffffff 95%),
+                    linear-gradient(-175deg, rgba(0,0,0,0) 90%, #c0c0c0 90%),
+                    linear-gradient( -85deg, rgba(0,0,0,0) 92%, #c0c0c0 92%),
+                    linear-gradient(-175deg, rgba(0,0,0,0) 85%, #a9a9a9 85%),
+                    linear-gradient( -85deg, rgba(0,0,0,0) 89%, #a9a9a9 89%),
+                    linear-gradient(-175deg, rgba(0,0,0,0) 80%, #808080 80%),
+                    linear-gradient( -85deg, rgba(0,0,0,0) 86%, #808080 86%),
+                    linear-gradient(-175deg, rgba(0,0,0,0) 75%, #696969 75%),
+                    linear-gradient( -85deg, rgba(0,0,0,0) 83%, #696969 83%),
+                    linear-gradient(-175deg, rgba(0,0,0,0) 70%, #000000 70%),
+                    linear-gradient( -85deg, rgba(0,0,0,0) 80%, #000000 80%);
+                  }
+.contactFancy {
+  position: absolute;
+  background-color: #FFFFFF;
+  padding: 2rem;
+  text-align: center;
+  max-width: 300px;
+  left: 6%;
+  top: 15%;
+  
+}
+
+.contactFancy::before {
+  content: "";
+
+  position : absolute;
+ 
+  bottom   : 15px;
+  right    : -6px;
+  width    : 50%;
+  top      : 80%;
+  max-width: 300px;
+z-index: -1;
+  box-shadow: 0px 20px 12px black;
+  transform: rotate(3deg);
+}
+
+#contactSection2 {
+  padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+h3.aboutMe {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#contactImg {
+  width: 95%;
+  align-items: center;
+  margin-top: -5%;
+}
+
+#contactMe {
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+#contactInfo {
+  margin: 0 0 8% 21%;
+  
+}
+
+.liContact {
+list-style-type: none;
+font-weight: 400;
+font-size: 18px;
+color: #7a7a7a;
+letter-spacing: 0.05rem;
+padding-bottom: 2%;
+}
+
+.imgContact {
+  text-align: center;
+width: 13%;
+
+}
+
+.tekstContact {
+  position: absolute;
+  text-align: center;
+  margin: 1.5% 0 0 2%;
+  
+  
+  
+
+}
+/* Contact page slutter */
+/* Media queries starts */
+
+
+
+
+/* Media queries ends */
+/* animista */
+
+.shake-vertical {
+	-webkit-animation: shake-vertical 6s linear infinite both;
+	        animation: shake-vertical 6s linear infinite both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2020-9-29 20:17:51
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation shake-vertical
+ * ----------------------------------------
+ */
+ @-webkit-keyframes shake-vertical {
+    0%,
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateY(-4px);
+              transform: translateY(-4px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateY(4px);
+              transform: translateY(4px);
+    }
+    80% {
+      -webkit-transform: translateY(3.4px);
+              transform: translateY(3.4px);
+    }
+    90% {
+      -webkit-transform: translateY(-3.4px);
+              transform: translateY(-3.4px);
+    }
+  }
+  @keyframes shake-vertical {
+    0%,
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateY(-4px);
+              transform: translateY(-4px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateY(4px);
+              transform: translateY(4px);
+    }
+    80% {
+      -webkit-transform: translateY(3.4px);
+              transform: translateY(3.4px);
+    }
+    90% {
+      -webkit-transform: translateY(-3.4px);
+              transform: translateY(-3.4px);
+    }
+  }
+  
